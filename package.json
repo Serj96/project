@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Serj96/team-project-cocktails.gi"
+    "url": "git+https://github.com/Serj96/team-project-cocktails.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Serj96/team-project-cocktails.gi"
+    "url": "https://github.com/Serj96/team-project-cocktails.git"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
