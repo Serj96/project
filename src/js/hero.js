@@ -104,7 +104,7 @@ class Select {
   }
 }
 
-const select = new Select([(arrayLetters = 'A')]);
+const select = new Select([arrayLetters]);
 /*function sorryContent(str) {
   const markup = str.map(() => `<h2 class="sorry__title"></h2> <img src="../image/sorry.jpg" alt="not found cocktail"/>`).join('');
   ulList.insertAdjacentHTML('afterbegin', markup);
