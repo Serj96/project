@@ -36,68 +36,77 @@ let arrayLetters = [
   '9',
   '0',
 ];
-const renderList = document.querySelector('.list_lit');
+const ulRoster = document.querySelector('.hero__roster');
 function markupList(arrayLetters) {
   const markup = arrayLetters
-    .map(([arrayLetters]) => `<li class="hero__items">${arrayLetters}</li>`)
+    .map(
+      ([arrayLetters]) =>
+        `<li class="hero__it"> <button class="hero__knob">${arrayLetters}</button></li>`
+    )
     .join('');
-  renderList.insertAdjacentHTML('afterbegin', markup.replaceAll(',', ''));
+  ulRoster.insertAdjacentHTML('afterbegin', markup.replaceAll(',', ''));
 }
 
-
-const list = document.querySelector('.hero__list');
+const ulList = document.querySelector('.hero__list');
 function markupArr(arrayLetters) {
   const markup = arrayLetters
-    .map(([arrayLetters]) => `<li class="hero__items">${arrayLetters}</li>`)
+    .map(
+      ([arrayLetters]) =>
+        `<li class="hero__item"><button class="hero__button">${arrayLetters}</button></li>`
+    )
     .join('');
-  list.insertAdjacentHTML('afterbegin', markup.replaceAll(',', ''));
+  ulList.insertAdjacentHTML('afterbegin', markup.replaceAll(',', ''));
 }
 
 class Select {
   constructor(options) {
-    this.element = list;
+    this.element = ulList;
     this.options = options;
-    this.el = document.querySelector('.div__input');
-    this.back = document.querySelector('.backdrop');
-    console.log(this.el);
-
+    this.content = document.querySelector('.hero__content');
+    this.b = document.querySelector('.select__backdrop');
     this.render();
-    this.step();
+    this.occurrent();
   }
   render() {
     [arrayLetters] = this.options;
     markupArr(arrayLetters);
-  markupList([...arrayLetters]);
+    markupList([...arrayLetters]);
   }
 
-  step() {
+  occurrent() {
     this.clickMenu = this.clickMenu.bind(this);
-    this.el.addEventListener('click', this.clickMenu);
-  
+    this.content.addEventListener('click', this.clickMenu);
   }
   clickMenu(e) {
     e.preventDefault();
-
     const { type } = e.target.dataset;
-
     if (type === 'input') {
       this.toggle();
-  
+    } else if (type === this.b) {
+      this.close();
+    } else {
+      this.open();
     }
   }
-  isOpen() {
-    this.element.classList.add('open');
+  get isOpen() {
+    this.element.classList.contains('open');
   }
 
   toggle() {
-    this.isOpen ? this.close() : this.open();
+    !this.isOpen ? this.close() : this.open();
   }
   close() {
     this.element.classList.remove('open');
   }
+
   open() {
     this.element.classList.add('open');
   }
 }
 
-const select = new Select([arrayLetters]);
+const select = new Select([(arrayLetters = 'A')]);
+/*function sorryContent(str) {
+  const markup = str.map(() => `<h2 class="sorry__title"></h2> <img src="../image/sorry.jpg" alt="not found cocktail"/>`).join('');
+  ulList.insertAdjacentHTML('afterbegin', markup);
+}
+sorryContent(str)*/

@@ -1,0 +1,11 @@
+.footer__container{
+    width: 320px;
+    height: 110px;
+    background-color: $hover-color;
+    @media screen and(min-width:$tablet) {
+       width: 768px;
+        }
+                 @media screen and(min-width:$tablet) {
+                     width: 1280px;
+                 }
+}
