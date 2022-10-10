@@ -1,44 +1,77 @@
-<header class="header">
-    тут буде хедер ;)
-  <div class="container header__container">
-    <a class="logo" href="#"></a>
-    <nav class="nav" data-nav>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="#">Home</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#"
-            >Favorite<span class="nav__link-line"></span
-          ></a>
-          <ul class="nav__sublist">
-            <li class="nav__subitem">
-              <a class="nav__sublink" href="#">Favorite cocktails</a>
-            </li>
-            <li class="nav__subitem">
-              <a class="nav__sublink" href="#">Favorite ingredients</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+<header class="page-header">
+  <div class="container page-header__container">
+    <a class="logo visible" href="#" alt="logo company"></a>
 
-    <form class="search-form">
-      <div class="search-form__field">
+    <div class="page-header__box" data-box>
+      <form class="search-form visible">
+        <div class="search-form__field">
+          <input
+            class="search-form__input"
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search..."
+            aria-label="search input field"
+          />
+          <button
+            class="search-form__btn"
+            type="submit"
+            aria-label="search button"
+          >
+            <svg class="search-form__icon" width="24" height="24"></svg>
+          </button>
+        </div>
+      </form>
+
+      <nav class="nav" aria-label="navigation menu" data-nav>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#"
+              >Favorite<span class="nav__link-line"></span
+            ></a>
+            <ul class="nav__sublist">
+              <li class="nav__subitem">
+                <a class="nav__sublink" href="#">Favorite cocktails</a>
+              </li>
+              <li class="nav__subitem">
+                <a class="nav__sublink" href="#">Favorite ingredients</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="theme-switch" data-switch>
+      <span class="theme-switch__label theme-switch-light">Light</span>
+      <div class="theme-switch__control">
         <input
-          class="search-form__input"
-          type="text"
-          name="searchQuery"
-          autocomplete="off"
-          placeholder="Search..."
+          class="theme-switch__toggle"
+          type="checkbox"
+          name="theme"
+          id="theme-switch-toggle"
+          aria-label="switch between dark and light theme"
         />
-        <button class="search-form__btn" type="submit">
-          <svg class="search-form__icon"></svg>
-        </button>
+        <label
+          aria-hidden="true"
+          class="theme-switch__track"
+          for="theme-switch-toggle"
+        >
+        </label>
+        <div aria-hidden="true" class="theme-switch__marker"></div>
       </div>
-    </form>
+      <span class="theme-switch__label theme-switch-dark">Dark</span>
+    </div>
 
-    <button class="burger" data-burger aria-label="menu" aria-expanded="false">
+    <button
+      class="burger"
+      data-burger
+      aria-label="menu button"
+      aria-expanded="false"
+    >
       <span class="burger__line"></span>
     </button>
   </div>
