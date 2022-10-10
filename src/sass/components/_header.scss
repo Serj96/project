@@ -1,13 +1,79 @@
-.header {
-  background-color: tomato;
-  text-align: center;
-  padding: 30px;
-  height: 75px;
+@import './header/logo';
+@import './header/search-form';
+@import './header/burger';
+@import './header/theme-switch';
+@import './header/navigation';
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  overflow: hidden;
+  height: 55px;
+
+  body.light-theme & {
+    background: #fff;
+  }
+
+  body.dark-theme & {
+    background:  #202025;
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    height: 65px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 60px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (min-width: 1024px) {
+      padding-top: 10px;
+    }
+  }
+
+  &__box {
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      right: 0;
+      top: 55px;
+      z-index: 100;
+      overflow-y: auto;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: opacity 0.4s, transform 0.4s ease-in-out;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      width: 735px;
+    }
+  }
 }
 
-.search-form,
-.search-form__btn,
-.nav,
-.burger {
-  display: none;
+.visible {
+  @media screen and (max-width: 1023px) {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
