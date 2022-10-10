@@ -1,0 +1,99 @@
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 148px;
+  height: 24px;
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.4s, transform 0.4s ease-in-out;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    position: absolute;
+    top: 40%;
+    left: 220px;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.4s, transform 0.4s ease-in-out;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-right: 20px;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    width: 40px;
+    height: 16px;
+    border: 1px solid #fd5103;
+    border-radius: 20px;
+    padding: 2px 0;
+    margin: 0 5px;
+  }
+
+  &__toggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+  }
+
+  &__track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    user-select: none;
+    background-color: #fff;
+    border-radius: inherit;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  &__marker {
+    position: relative;
+    background-color: #fd5103;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    transform: translateX(2px);
+    transition: transform 250ms ease-in-out;
+  }
+
+  &__toggle:checked + &__track {
+    background-color: #fd5103;
+  }
+
+  &__toggle:checked ~ &__marker {
+    background-color: #fff;
+    transform: translateX(24px);
+  }
+
+  &__toggle:focus + &__track,
+  &__toggle:active + &__track {
+    box-shadow: 0 0 0 2px yellowgreen;
+  }
+}
+
+.theme-switch-active {
+  color: #fd5103;
+}

@@ -5,6 +5,16 @@ body {
   letter-spacing: 0.02em;
 }
 
+body.light-theme {
+  background-color: #fff;
+  color: #202025;
+}
+
+body.dark-theme {
+  background-color: #202025;
+  color: #fff;
+}
+
 img {
   display: block;
   max-width: 100%;
