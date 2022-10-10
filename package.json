@@ -18,13 +18,20 @@
     "url": "https://github.com/Serj96/team-project-cocktails.git"
   },
   "dependencies": {
+    "@firebase/app": "^0.8.0",
+    "@firebase/auth": "^0.20.8",
+    "axios": "^1.1.2",
+    "firebase": "^9.11.0",
+    "lodash": "^4.17.21",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "buffer": "^6.0.3",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
