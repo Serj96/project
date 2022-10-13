@@ -1,0 +1,138 @@
+.favorite__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.favorite__title {
+  margin-bottom: 60px;
+  text-align: center;
+  color: var(--title-secondary-light-theme);
+
+  @include mq(fab) {
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  @include mq(tab) {
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  @include mq(desc) {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.5;
+  }
+  @include fonts($fs: 22px, $fw: 600, $lh: 1.91, $ls: null);
+}
+
+.favorite__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--button-text-color);
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px;
+
+  @include mq(mob) {
+    --card-item: 1;
+  }
+
+  @include mq(tab) {
+    --card-item: 2;
+  }
+}
+
+.favorite__list-card {
+  justify-content: center;
+
+  @include mq(tab-only) {
+    --card-gap: 15px;
+  }
+}
+
+.favorite__list-name {
+  @include fonts($fs: 26px, $fw: 900, $lh: 1.6, $ls: null);
+  margin-bottom: 20px;
+
+  text-align: inherit;
+  color: var(--background-dark);
+
+  @include mq(fab) {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  @include mq(tab) {
+    margin-bottom: 28px;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  @include mq(desc) {
+    margin-bottom: 28px;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+}
+
+.favorite__list-type {
+  margin-bottom: 20px;
+  font-family: var(--title-poppins);
+  @include fonts($fs: 14px, $fw: 600, $lh: 1.5, $ls: null);
+
+  text-transform: uppercase;
+  color: var(--alfavito-color);
+
+  @include mq(tab) {
+    padding-bottom: 28px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @include mq(desc) {
+    padding-bottom: 28px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.favorite__btn-wrap {
+  gap: 10px;
+
+  @include mq(mob) {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+  }
+
+  @include mq(tab) {
+    flex-direction: row;
+  }
+}
+
+.garcon {
+  @include mq(mob) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include fonts($fs: 18px, $fw: 700, $lh: 1.31, $ls: null);
+    font-family: var(--title-poppins);
+    color: var(--title-secondary-light-theme);
+  }
+
+  @include mq(tab) {
+    max-width: 493px;
+    @include fonts($fs: 20px, $fw: 700, $lh: 1.5, $ls: null);
+  }
+}
+
+.no-result {
+  margin-top: 20px;
+}

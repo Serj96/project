@@ -1,0 +1,15 @@
+<div class='modal-team'>
+  <div class='team__container'>
+    {{#each this}}
+      <div class='team__item dark--modal-back'>
+        <a href='{{git}}' target='_blank' class='team__link'>
+          <img class='team__image' src='{{photo}}' />
+          <div class='team-meta'>
+            <p class='team__item-text dark--title'>{{role}}</p>
+            <p class='team__item-title'>{{name}}</p>
+          </div>
+        </a>
+      </div>
+    {{/each}}
+  </div>
+</div>

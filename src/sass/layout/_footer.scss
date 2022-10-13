@@ -1,0 +1,110 @@
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--footer-color);
+  min-height: 120px;
+}
+
+.footer__list--icon {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include fonts(14px, 14, 1.91, 0em);
+  font-family: Roboto;
+  font-weight: 400;
+  color: #202025;
+
+  @include mq(mob) {
+    flex-direction: column;
+    font-size: 8px;
+  }
+
+  @include mq(tab) {
+    font-size: 12px;
+    flex-direction: row;
+  }
+
+  @include mq(desc) {
+    font-size: 14px;
+  }
+}
+
+.footer__team {
+  @include fonts(10px, 14, 1.91, 0em);
+  font-family: Roboto;
+  color: var(--title-secondary-dark-theme);
+  text-decoration: underline;
+
+  @include mq(tab) {
+    font-size: 13px;
+  }
+
+  @include mq(desc) {
+    font-style: 15px;
+  }
+}
+// scroll-up //
+
+.scroll-up {
+  position: fixed;
+  bottom: 115px;
+  right: -7px;
+  border: 0;
+  background-color: transparent;
+  z-index: 4;
+
+  @include mq(tab) {
+    bottom: 115px;
+    right: 15px;
+  }
+
+  @include mq(desc) {
+    bottom: 115px;
+    right: 50px;
+  }
+
+  &:hover .scroll-up__icon {
+    fill: #800000;
+    scale: 1.4;
+  }
+}
+
+.scroll-up__icon {
+  fill: #fd5103;
+  width: 20px;
+  height: 30px;
+  border-radius: 10px;
+
+  @include mq(tab) {
+    width: 35px;
+    height: 35px;
+  }
+
+  @include mq(desc) {
+    height: 50px;
+    width: 50px;
+  }
+
+  transition: background-color, scale 250ms ease-in-out, fill 250ms ease-in-out;
+
+  cursor: pointer;
+}
+
+.wraper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.cocktails-content {
+  flex: 1;
+}

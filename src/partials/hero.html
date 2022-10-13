@@ -1,51 +1,26 @@
-<section class="hero">
+<section class="section hero">
   <div class="container">
     <h1 class="hero__title">A party without cocktails is not like a party</h1>
-    <picture>
-      <source
-        srcset="
-          ./image/cocktail-mob.jpg    1x,
-          ./image/cocktail-mob@2x.jpg 2x,
-          ./image/cocktail-mob@3x.jpg 3x
-        "
-        media="(max-width: 767.99px)"
-      />
-      <source
-        srcset="
-          ./image/cocktail-tab.jpg    1x,
-          ./image/cocktail-tab@2x.jpg 2x,
-          ./image/cocktail-tab@3x.jpg 3x
-        "
-        media="(max-width: 1279.99px)"
-      />
-      <source
-        srcset="
-          ./image/cocktail-des.jpg    1x,
-          ./image/cocktail-des@2x.jpg 2x,
-          ./image/cocktail-des@3x.jpg 3x
-        "
-        media="(min-width:1279.99px)"
-      />
-      <img
-        class="hero__img"
-        src="./image/cocktail-mob.jpg"
-        alt="cocktail"
-        min-width="300"
-      />
-    </picture>
-    <p class="hero__text">Search your favorite cocktail by ABC</p>
-    <div class="select__backdrop" data-type="backdrop"></div>
-    <div class="hero__content" data-type="input">
-      A
-      <button class="hero-content__btn">
-        <svg class="hero__svg" width="11" height="24">
-          <use href="./image/icon.svg#vector-i" />
+  </div>
+  <div class="hero__picture"data-aos="fade-left" data-aos-duration="700"></div>
+  <div class="container flex">
+    <p class="hero__text dark--title">Search your favorite cocktail by ABC</p>
+    <div class="hero__select-menu js-wrapper">
+      <div class="hero__select-btn" for="select">
+        <span class="hero__select-text dark--grey">A</span>
+        <svg
+          class="hero__icon"
+          width="24"
+          height="24"
+          aria-label="drop-down-menu"
+        >
+          <use href="./images/sprite-hero.svg#icon-drop-down"></use>
         </svg>
-      </button>
-
-      <ul class="hero__list open"></ul>
+      </div>
+      <ul class="options hero__select"></ul>
     </div>
-
-    <ul class="hero__roster"></ul>
+    <div class="hero__list-wrapper">
+      <ul class="hero__list"></ul>
+    </div>
   </div>
 </section>

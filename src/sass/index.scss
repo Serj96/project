@@ -1,10 +1,21 @@
+@import './utils/mixin';
+@import './utils/reset';
+@import './utils/variables';
+
+@import './base/card-set';
 @import './base/common';
-@import './util/mixin';
-@import './util/vars';
-@import './util/util-classes';
-@import './components/footer';
-@import './components/header';
-@import './components/hero';
+@import './base/container';
+@import './base/section';
 
+@import './layout/header';
+@import './layout/hero';
+@import './layout/footer';
+@import './layout/main';
 
+@import './compotents/dark-mod';
+@import './compotents/mob-menu';
+@import './compotents/modal-coctail';
+@import './compotents/modal-components';
+@import './compotents/modal-team';
 
+@import './favorite/favorite';

@@ -1,0 +1,251 @@
+.backdrop-modal-is-hidden {
+  display: none;
+  transition: var(--transition);
+}
+.backdrop-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  // overflow: hidden;
+  transition: var(--transition);
+}
+.modal-scale {
+  display: none;
+}
+.is-hidden-modal-coctails {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-coctails__position {
+  // z-index: 1;
+  background-color: transparent;
+  border-radius: 10px;
+  position: absolute;
+  width: 320px;
+  height: 600px;
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq(tab) {
+    top: 50%;
+    width: 768px;
+    height: 598px;
+  }
+  transition: var(--transition);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.modal-coctails {
+  overflow: overlay;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 19;
+  width: 320px;
+  height: 600px;
+  border-radius: 10px;
+  @include mq(tab) {
+    width: 768px;
+    height: 598px;
+  }
+  transition: var(--transition);
+  background-color: var(--button-color-white);
+  // overflow: hidden;
+}
+
+.modal-img {
+  @include mq(mob) {
+    position: absolute;
+    width: 280px;
+    height: 320px;
+    left: 20px;
+    top: 340px;
+    border-radius: 4px 4px 4px 45px;
+  }
+  @include mq(tab) {
+    position: absolute;
+    width: 288px;
+    height: 320px;
+    left: 0px;
+    top: 0px;
+  }
+}
+.modal-coctail-name {
+  @include mq(mob) {
+    // padding-top: 10px;
+    width: 260px;
+    height: 37px;
+    margin-left: 16px;
+  }
+  @include mq(tab) {
+    margin-left: 300px;
+  }
+  color: var(--background-dark);
+}
+.modal-ingredients {
+  @include mq(mob) {
+    position: absolute;
+    width: 103px;
+    height: 24px;
+    left: 16px;
+    top: 680px;
+  }
+  @include mq(tab) {
+    position: absolute;
+    width: 103px;
+    height: 24px;
+    left: 320px;
+    top: 105px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  font-family: var(--title-poppins);
+  font-style: normal;
+  font-weight: 600;
+  color: #000917;
+  text-transform: uppercase;
+}
+.modal-per {
+  @include mq(mob) {
+    position: absolute;
+    width: 100px;
+    height: 21px;
+    left: 16px;
+    top: 712px;
+
+    font-family: var(--title-poppins);
+    font-style: normal;
+    font-weight: 300;
+    color: var(--title-secondary-light-theme);
+  }
+  @include mq(tab) {
+    @include fonts($fs: 14px, $fw: 400, $lh: 1.5, $ls: 0.02em);
+    position: absolute;
+    width: 90px;
+    height: 21px;
+    left: 320px;
+    top: 137px;
+  }
+}
+.modal-coctail-component::before {
+  content: '✶';
+  margin-right: 6px;
+  color: inherit;
+}
+.modal-coctail-components {
+  @include mq(mob) {
+    overflow: auto;
+    font-family: var(--title-poppins);
+    position: absolute;
+    width: 250px;
+    height: 160px;
+    left: 16px;
+    top: 741px;
+  }
+
+  @include mq(tab) {
+    @include fonts($fs: 16px, $fw: 400, $lh: 1.6, $ls: 0.02em);
+    position: absolute;
+    width: 215px;
+    height: 155px;
+    left: 320px;
+    top: 166px;
+  }
+
+  padding: 0;
+  overflow-y: scroll;
+}
+.modal-Instructions {
+  @include mq(mob) {
+    position: absolute;
+    width: 122px;
+    height: 26px;
+    left: 16px;
+    top: 87px;
+  }
+  @include mq(tab) {
+    position: absolute;
+    width: 122px;
+    height: 26px;
+    left: 28px;
+    top: 348px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  font-family: var(--title-poppins);
+  color: var(--background-dark);
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.modal-text {
+  @include mq(mob) {
+    overflow-y: auto;
+    position: absolute;
+    // width: 275px;
+    width: 90%;
+    height: 168px;
+    left: 16px;
+    top: 137px;
+  }
+  @include mq(tab) {
+    position: absolute;
+    // width: 615px;
+    height: 84px;
+    left: 28px;
+    top: 398px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  font-family: var(--title-poppins);
+  font-style: normal;
+  font-weight: 400;
+  color: #5f6775;
+  margin: 0;
+}
+
+.modal-menu__close {
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  z-index: 99;
+  margin: 0;
+
+  border: none;
+  background-color: transparent;
+  color: var(--title-secondary);
+
+  transition: fill var(--transition);
+  &:hover,
+  &:focus {
+    fill: var(--button-text-color);
+  }
+
+  @include mq(tab) {
+    top: 2%;
+  }
+}
+
+.hidden_remove {
+  display: none;
+}
+.modal-coctail-component {
+  &:hover,
+  &:focus {
+    color: var(--button-text-color);
+    cursor: pointer;
+  }
+}

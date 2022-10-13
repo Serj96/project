@@ -1,0 +1,183 @@
+// .grid {
+//   @include mq(tab-only) {
+//     display: grid;
+//     grid-template-columns: 26, 1fr;
+//     grid-template-rows: auto;
+//     row-gap: 6px;
+//     column-gap: 8px;
+//     margin: 0 auto;
+//   }
+// }
+
+// .grid__item {
+//   display: inline-block;
+// }
+// // grid markup
+// .hero__item--a {
+//   grid-area: 1 / 8 / 2 / 9;
+// }
+// .hero__item--b {
+//   grid-area: 2 / 8 / 3 / 9;
+// }
+// .hero__item--c {
+//   grid-area: 3 / 8 / 4 / 9;
+// }
+// .hero__item--d {
+//   grid-area: 4 / 8 / 5 / 9;
+// }
+// .hero__item--e {
+//   grid-area: 5 / 8 / 6 / 9;
+// }
+// .hero__item--f {
+//   grid-area: 6 / 8 / 7 / 9;
+// }
+// .hero__item--e {
+//   grid-area: 7 / 8 / 8 / 9;
+// }
+// .hero__item--e {
+//   grid-area: 8 / 8 / 9 / 9;
+// }
+// .hero__item--e {
+//   grid-area: 9 / 8 / 10 / 9;
+// }
+// .hero__item--e {
+//   grid-area: 10 / 8 / 11 / 9;
+// }
+// .hero__item--e {
+//   grid-area: 11 / 8 / 12 / 9;
+// }
+// .hero__item--e {
+//   grid-area: 12 / 8 / 13 / 9;
+// }
+// .hero__item--m {
+//   grid-area: 13 / 8 / 14 / 9;
+// }
+// .hero__item--n {
+//   grid-area: 1 / 9 / 2 / 10;
+// }
+// .hero__item--o {
+//   grid-area: 2 / 9 / 3 / 10;
+// }
+// .hero__item--p {
+//   grid-area: 3 / 9 / 4 / 10;
+// }
+// .hero__item--q {
+//   grid-area: 4 / 9 / 5 / 10;
+// }
+// .hero__item--r {
+//   grid-area: 5 / 9 / 6 / 10;
+// }
+// .hero__item--s {
+//   grid-area: 6 / 9 / 7 / 10;
+// }
+// .hero__item--t {
+//   grid-area: 7 / 9 / 8 / 10;
+// }
+// .hero__item--u {
+//   grid-area: 8 / 9 / 9 / 10;
+// }
+// .hero__item--v {
+//   grid-area: 9 / 9 / 10 / 10;
+// }
+// .hero__item--w {
+//   grid-area: 10 / 9 / 11 / 10;
+// }
+// .hero__item--x {
+//   grid-area: 11 / 9 / 12 / 10;
+// }
+// .hero__item--y {
+//   grid-area: 12 / 9 / 13 / 10;
+// }
+// .hero__item--z {
+//   grid-area: 13 / 9 / 14 / 10;
+// }
+
+// .hero__item--1 {
+//   grid-area: 2 / 10 / 3 / 11;
+// }
+// .hero__item--2 {
+//   grid-area: 3 / 10 / 4 / 11;
+// }
+// .hero__item--1 {
+//   grid-area: 4 / 10 / 5 / 11;
+// }
+// .hero__item--1 {
+//   grid-area: 5 / 10 / 6 / 11;
+// }
+// .hero__item--1 {
+//   grid-area: 6 / 10 / 7 / 11;
+// }
+// .hero__item--1 {
+//   grid-area: 7 / 10 / 8 / 11;
+// }
+// .hero__item--1 {
+//   grid-area: 8 / 10 / 9 / 11;
+// }
+// .hero__item--1 {
+//   grid-area: 9 / 10 / 10 / 11;
+// }
+// .hero__item--1 {
+//   grid-area: 10 / 10 / 11 / 11;
+// }
+// .hero__item--0 {
+//   grid-area: 11 / 10 / 12 / 11;
+// }
+
+// UL markup
+
+// <li class="hero__item hero__item--a">A<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--b">B<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--c">C<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--d">D<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--e">E<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--f">F<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--g">G<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--h">H<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--i">I<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--j">J<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--k">K<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--l">L<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--m">M<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--n">N<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--o">O<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--p">P<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--q">Q<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--r">R<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--s">S<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--t">T<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--u">U<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--v">V<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--w">W<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--x">X<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--y">Y<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--z">Z<a href="#" class=""></a></li>
+//         <li class="hero__item hero__item--digit-1">
+//           1<a href="#" class=""></a>
+//         </li>
+//         <li class="hero__item hero__item--digit-2">
+//           2<a href="#" class=""></a>
+//         </li>
+//         <li class="hero__item hero__item--digit-3">
+//           3<a href="#" class=""></a>
+//         </li>
+//         <li class="hero__item hero__item--digit-4">
+//           4<a href="#" class=""></a>
+//         </li>
+//         <li class="hero__item hero__item--digit-5">
+//           5<a href="#" class=""></a>
+//         </li>
+//         <li class="hero__item hero__item--digit-6">
+//           6<a href="#" class=""></a>
+//         </li>
+//         <li class="hero__item hero__item--digit-7">
+//           7<a href="#" class=""></a>
+//         </li>
+//         <li class="hero__item hero__item--digit-8">
+//           8<a href="#" class=""></a>
+//         </li>
+//         <li class="hero__item hero__item--digit-9">
+//           9<a href="#" class=""></a>
+//         </li>
+//         <li class="hero__item hero__item--digit-0">
+//           0<a href="#" class=""></a>
+//         </li>

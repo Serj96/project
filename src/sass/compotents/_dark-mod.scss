@@ -1,0 +1,91 @@
+.theme {
+  position: fixed;
+  cursor: pointer;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(39, 38, 40, 0.4);
+}
+
+.dark {
+  background-image: radial-gradient(ellipse at bottom, #5f5d5d 30%, #000 100%);
+}
+
+.dark .dark--background-modal {
+  background-image: radial-gradient(ellipse at bottom, #5f5d5d 30%, #000 100%);
+}
+.dark .dark--background-top {
+  background-image: radial-gradient(ellipse at top, #5f5d5d 30%, #000 100%);
+}
+
+.dark .dark--background {
+  background-image: radial-gradient(ellipse at left, #5f5d5d 30%, #000 100%);
+}
+
+.dark .dark--white-trans::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.dark .dark--text {
+  color: var(--text-dark-mod);
+}
+
+.dark .dark--title {
+  color: var(--title-secondary-dark-theme);
+}
+
+.dark .dark--white-trans {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.dark .dark--white {
+  color: #ffffff;
+}
+
+.dark .dark--grey {
+  color: var(--alfavito-color);
+}
+.dark .dark--grey-hero {
+  color: var(--alfavito-color);
+  &:focus,
+  &:hover {
+    color: var(--footer-color);
+  }
+}
+
+.dark .dark--orang {
+  color: var(--footer-color);
+}
+
+.dark .dark--fill {
+  fill: var(--background-main);
+  &:focus,
+  &:hover {
+    fill: var(--footer-color);
+  }
+}
+
+.dark .dark--btn-back {
+  background-color: #313030;
+}
+
+.dark .dark--modal-back {
+  background-color: #313030;
+}
+.dark .dark--modal-shadow {
+  box-shadow: 0 19px 38px #5f5d5d, 0 15px 12px #313030;
+}
+
+.dark .dark--team-body {
+  background-color: #e2eff97d;
+}
+
+.dark .dark--team-back {
+  background-color: #07131bad;
+}
+
+// background-color: #07131bad;
+// background-color: #e2eff97d;

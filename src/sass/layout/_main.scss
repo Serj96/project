@@ -1,0 +1,215 @@
+.cocktails {
+  padding-bottom: 20px;
+  @include mq(tab) {
+    padding-bottom: 60px;
+  }
+  @include mq(desc) {
+    padding-top: 180px;
+  }
+}
+
+.cocktails__first-title {
+  @include fonts($fs: 22px, $fw: 600, $lh: 1.91, $ls: null);
+  text-align: center;
+  color: var(--title-secondary);
+  margin-bottom: 60px;
+
+  @include mq(tab) {
+    @include fonts($fs: 32px, $fw: 700, $lh: 1.31, $ls: null);
+
+    font-family: var(--text-roboto);
+  }
+
+  @include mq(desc) {
+    @include fonts($fs: 48px, $fw: 700, $lh: 1.5, $ls: null);
+  }
+}
+
+.cocktails__list {
+  justify-content: center;
+  @include mq(desc) {
+    // justify-content: space-evenly;
+  }
+}
+
+.cocktails__list--favotit {
+  @include mq(tab-only) {
+    --card-gap: 15px;
+  }
+}
+
+.cocktails__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--button-text-color);
+  border-radius: 5px;
+  overflow: hidden;
+
+  @include mq(mob) {
+    // max-width: 420px;
+    --card-item: 1;
+  }
+  @include mq(tab) {
+    max-width: 320px;
+    --card-item: 2;
+  }
+  @include mq(desc) {
+    // margin-left: 20px;
+    max-width: 335px;
+  }
+}
+
+.cocktails__box {
+  padding: 20px 0;
+}
+
+.cocktails__second-title {
+  margin-bottom: 16px;
+  @include fonts($fs: 26px, $fw: 900, $lh: 1.62, $ls: null);
+
+  font-family: var(--text-roboto);
+  text-align: center;
+  color: var(--title-secondary);
+
+  @include mq(tablet) {
+    font-size: 28px;
+    margin-bottom: 25px;
+    max-width: 204px;
+  }
+
+  @include mq(desc) {
+    font-size: 32px;
+  }
+}
+
+.cocktails__button-box {
+  @include mq(mob) {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+  }
+  @include mq(fab) {
+    // flex-direction: column;
+  }
+  @include mq(tab) {
+    flex-direction: row;
+  }
+}
+
+.cocktails__btn {
+  @include mq(mob) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    font-family: var(--text-roboto);
+
+    min-width: 108px;
+    min-height: 39px;
+    margin: 0;
+    padding: 0;
+
+    color: var(--button-text-white);
+    background-color: var(--button-color-orange);
+    border-radius: 4px;
+    border: none;
+
+    transition: color var(--transition), background-color var(--transition),
+      outline var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--button-text-color);
+      background-color: var(--button-color-white);
+      outline: 1px solid var(--button-text-color);
+    }
+  }
+
+  @include mq(tab) {
+    min-width: 160px;
+    padding: 12px 27px;
+    font-size: 20px;
+    max-width: 160px;
+    height: 48px;
+  }
+  @include mq(desc) {
+    max-width: 182px;
+    height: 48px;
+  }
+}
+
+.cocktails__button-text {
+  @include fonts($fs: 14px, $fw: 400, $lh: 1.22, $ls: 0.02em);
+
+  font-family: var(--text-roboto);
+  text-align: center;
+
+  @include mq(tab) {
+    @include fonts($fs: 20px, $fw: null, $lh: 1.2, $ls: null);
+  }
+}
+
+.transparent {
+  background-color: var(--button-color-white);
+  color: var(--button-color-orange);
+  outline: 1px solid var(--button-text-color);
+  transition: color var(--transition), background-color var(--transition),
+    outline var(--transition);
+
+  // &::after {
+  //   margin-left: 5px;
+  //   width: 19px;
+  //   height: 21px;
+  //   display: inline-block;
+  //   content: '';
+  //   background-image: url(../images/test.svg);
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   fill: #000;
+  //   // stroke-width: 1px solid var(--button-color-orange);
+  // }
+
+  @include mq(tab) {
+    min-width: 123px;
+    padding: 12px 13px;
+  }
+  &:hover,
+  &:focus {
+    color: var(--button-color-orange);
+    background-color: var(--hover-button-color);
+    outline: 1px solid var(--button-color-orange);
+  }
+}
+
+.empty-heart,
+.full-heart {
+  margin-left: 5px;
+}
+
+.empty-heart {
+  display: block;
+}
+.full-heart {
+  display: none;
+}
+
+.activated .empty-heart {
+  display: none;
+}
+.activated .full-heart {
+  display: block;
+}
+
+.cocktails__btn--position {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
+
+.btn_is-hidden {
+  display: none;
+}

@@ -1,0 +1,91 @@
+<div class="burger-menu dark--background-modal" data-menu>
+  <div class="burger-container">
+    <div class="burger-menu__item">
+      <div class="burger-menu__header">
+        <a href="./index.html"  class="burger-logo">
+        <picture>
+          <source
+            srcset="./images/logo-mob@1x.png 1x, ./images/logo-mob@2x.png 2x"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="./images/logo-tab@1x.png 1x, ./images/logo-tab@2x.png 2x"
+            media="(min-width: 768px)"
+          />
+          <source />
+          <img src="./images/logo-mob@1x.png" alt="logo" />
+        </picture>
+      </a>
+      <ul class="burger-switch__list">
+        <li class="switch__list-item switch__light dark--white">Light</li>
+
+        <li class="switcher">
+          <input
+            type="checkbox"
+            name="toggle"
+            id="switch__button"
+            class="switch__button js-dark-mod"
+          />
+          <label for="switch__button" class="text"></label>
+        </li>
+
+        <li class="switch__list-item switch__dark dark--orang">Dark</li>
+      </ul>
+      </div>
+      <button class="burger-btn__login js-btn-login" type="button">
+      Log in
+    </button>
+    <button
+      type="button"
+      class="btn-menu__open btn__burger-menu-open"
+      data-menu-open
+      aria-label="Mobile menu open"
+    >
+    </div>
+    <div class="burger-search">
+      <form class="header__search-wrapper">
+        <input
+          type="search"
+          placeholder="Search"
+          name="search"
+          class="search__input dark--background dark--white dark--white-trans"
+        />
+        <button class="search-btn" type="submit">
+          <span class="search__border"></span>
+          <svg class="search__icon" width="24" height="24">
+            <use href="./images/icon.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <button
+      type="button"
+      class="btn-burger__close"
+      data-menu-close
+      aria-label="Mobile menu closed"
+    >
+      <svg class="btn-burger__icon dark--fill" width="32px" height="32px">
+        <use href="./images/icon.svg#icon-close"></use>
+      </svg>
+    </button>
+    <nav class="burger__site-nav">
+      <ul class="burger-nav">
+        <li class="burger-nav__item">
+          <a class="burger-nav__link dark--title" href="./index.html">Home</a>
+        </li>
+        <li class="burger-nav__item">
+          <div class="event-stopper">
+          <a class="burger-nav__link dark--title" href="/src/coctail-fav.html"
+            >Favorite cocktails</a
+          ></div>
+        </li>
+        <li class="burger-nav__item">
+          <div class="event-stopper">
+          <a class="burger-nav__link dark--title" href="/src/ingridient-fav.html"
+            >Favorite ingredients</a
+          ></div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
